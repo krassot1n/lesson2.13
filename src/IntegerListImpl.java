@@ -113,13 +113,6 @@ public class IntegerListImpl implements IntegerList{
         Integer[] left = new Integer[mid];
         Integer[] right = new Integer[arr.length - mid];
 
-//        for (int i = 0; i < left.length; i++) {
-//            left[i] = arr[i];
-//        }
-//
-//        for (int i = 0; i < right.length; i++) {
-//            right[i] = arr[mid + i];
-//        }
         System.arraycopy(arr, 0, left, 0, mid);
         System.arraycopy(arr, mid, right, 0, arr.length - mid);
 
@@ -188,7 +181,7 @@ public class IntegerListImpl implements IntegerList{
             return item;
         }
         System.arraycopy(storage, index, storage, index + 1, size - index);
-        storage[index] = item;//не storage[size++] а index
+        storage[index] = item;
         size++;
 
         return item;
